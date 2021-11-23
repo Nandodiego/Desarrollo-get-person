@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-body: linear-gradient(180deg, #73CC8C 0%, #6D83BC 100%);
+    --font-family-all: 'Nunito', sans-serif;
+    --color-white: #FFFFFF;
+    --border-button: 2px solid #FFFFFF;
+}
+
+body{
+    background: var(--bg-body);
+}
+
+.container{
+    width: 100%;
+    margin-top: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__images{
+    cursor: pointer;
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+
+.container__names{
+    text-align: center;
+    font-family: var(--font-family-all);
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.usernames{
+    margin-top: 24px;
+    text-align: center;
+    font-family: var(--font-family-all);
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--color-white); 
+}
+
+.cells{
+    margin-top: 24px;
+    font-family: var(--font-family-all);
+    text-align: center;
+    color: var(--color-white); 
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.emails{
+    margin-top: 24px;
+    text-align: center;
+    font-family: var(--font-family-all);
+    color: var(--color-white); 
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.container_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button{
+    cursor: pointer;
+    margin-top: 28px;
+    border: var(--border-button);
+    padding: 10px 45px 10px 45px;
+    background: transparent;
+    color: var(--color-white);
+    font-family: var(--font-family-all);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.button:active{
+    transform: scale(.9);
+}
+
+.footer{
+    width: 100%;
+    margin-top: 103px;
+    padding: 18px;
+}
+
+.footer__text{
+    text-align: center;
+    color: var(--color-white);
+    font-weight: 300;
+    font-size: 12px;
+    font-family: var(--font-family-all);
+}
+
+ @media(max-width: 768px){
+    .container__images{
+        width: 382px;
+        height: 392px;
+        margin-bottom: 30px;
+    }
+    .container__names{
+        font-size: 88px;
+        font-weight: 700;
+    }
+    .usernames{
+        margin-top: 30px;
+        font-size: 72px;
+        font-weight: 400;
+    }
+    
+    .cells{
+        margin-top: 30px;
+        font-weight: 400;
+        font-size: 40px;
+    }
+    
+    .emails{
+        margin-top: 30px;
+        font-size: 40px;
+        font-weight: 400;
+    }
+    
+    .button{
+        height: 88px;
+        width: 420px;
+        margin-top: 30px;
+        padding: 10px 74px 30px 74px;
+        font-size: 46px;
+        font-weight: 700;
+    }
+
+    .footer{
+        width: 100%;
+        margin-top: 103px;
+        padding: 18px;
+    }
+    
+    .footer__text{
+        font-weight: 400;
+        font-size: 18px;
+    }
+ }
