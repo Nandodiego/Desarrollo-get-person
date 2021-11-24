@@ -11,6 +11,7 @@ const getInformation = async () => {
     try{
         const respuesta = await fetch(API_URL);
         const datos = await respuesta.json();
+        console.log(datos);
 
         this.addImages(images, datos.results[0].picture.large);
         this.addNames(names,`${datos.results[0].name.title} 
@@ -19,15 +20,15 @@ const getInformation = async () => {
         this.addCell(cells, datos.results[0].cell);
         this.addEmail(emails, datos.results[0].email);     
     } catch(error){
-        console.log(error);
-    }
-}
+        alert(error);
+    };
+};
 
 getInformation();
 
 getPerson.addEventListener('click', () => {
     getInformation();
-})
+});
 
 function addImages(elementHtml, images){
     elementHtml.src = images;
